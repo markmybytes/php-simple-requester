@@ -273,21 +273,21 @@ class HTTPRequester {
 	 * @return bool `true` if the status code is 2xx
 	 */
 	public function success() {
-		return 200 <= $this->statusCode() || $this->statusCode() < 300;
+		return 200 <= $this->statusCode() && $this->statusCode() < 300;
 	}
 
 	/**
 	 * @return bool `true` if the status code is 4xx
 	 */
 	public function clientError() {
-		return 400 <= $this->statusCode() || $this->statusCode() < 500;
+		return 400 <= $this->statusCode() && $this->statusCode() < 500;
 	}
 
 	/**
 	 * @return bool `true` if the status code is 5xx
 	 */
 	public function serverError() {
-		return 500 <= $this->statusCode() || $this->statusCode() < 600;
+		return 500 <= $this->statusCode() && $this->statusCode() < 600;
 	}
 
 	/**
