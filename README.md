@@ -1,7 +1,7 @@
 # php-simple-requester
- A simple PHP cURL warpper
+A simple PHP cURL warpper
  
- ## usage
+## Usage
 ```php
 // get request
 $response = HTTPRequester::init("https://api.ipify.org")
