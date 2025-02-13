@@ -263,6 +263,13 @@ class HTTPRequester {
 	}
 
 	/**
+	 * @return bool `true` if the status code is not 2xx
+	 */
+	public function failed() {
+		return !$this->success();
+	}
+
+	/**
 	 * @return bool `true` if the status code is 2xx
 	 */
 	public function success() {
